@@ -1,0 +1,30 @@
+.header {
+    background-color: var(--color-bg);
+    min-height: 100vh;
+    display: flex;
+    /* margin: 2rem 2rem 0 2rem; */
+    /* -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); */
+    position: relative;
+
+    &__title {  // div
+        text-align: center;
+        margin: auto;
+
+        &-heading-primary {  // h1
+            font-size: 6rem;
+            text-transform: uppercase;
+            color: var(--color-grey);
+
+            .hl {  // span
+                color: var(--color-yellow);
+            }
+        }
+
+        &-heading-secondary {  // h2
+            font-size: 3.5rem;
+            text-transform: uppercase;
+            color: var(--color-grey);
+        }
+    }
+}

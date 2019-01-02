@@ -1,0 +1,26 @@
+.about {  // section
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 6rem;
+    background-color: #8C43FF;
+    color: white;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+    &__text {  // div
+        width: 60rem;
+        height: auto;
+        text-align: center;
+
+        &-heading {  // h2
+            font-size: 3.2rem;
+            margin-bottom: 1rem;
+        }
+
+        &-paragraph {  // p
+            font-size: 2rem;
+        }
+    }
+}
