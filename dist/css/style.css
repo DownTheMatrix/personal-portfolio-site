@@ -26,9 +26,12 @@ Note: 1em = 16px
 html {
   box-sizing: border-box;
   font-size: 62.5%; }
-  @media only screen and (max-width: 37.5em) {
+  @media only screen and (min-width: 18.75em) and (max-width: 37.43em) {
     html {
-      font-size: 56.25%; } }
+      font-size: 40%; } }
+  @media only screen and (min-width: 37.5em) and (max-width: 47.93em) {
+    html {
+      font-size: 50%; } }
 
 body {
   font-weight: 400;
@@ -39,7 +42,7 @@ body {
   --color-bg: #002B36;
   --color-yellow: #B58900;
   --color-grey: #839496;
-  --color-tertiary: rgb(52, 95, 95);
+  --color-tertiary: #345f5f;
   --color-white: #fff;
   --color-black: #000;
   --font-primary: "Raleway", sans-serif;
@@ -67,7 +70,7 @@ body {
       text-decoration: none;
       background-color: #003f50;
       color: var(--color-grey);
-      transition: all .2s; }
+      transition: all 0.2s; }
       .navbar .navlist__link:link:hover, .navbar .navlist__link:link:active, .navbar .navlist__link:visited:hover, .navbar .navlist__link:visited:active {
         background-color: var(--color-tertiary);
         color: var(--color-white);
@@ -137,20 +140,20 @@ body {
       letter-spacing: .2rem; }
 
 .about {
-  min-height: min-content;
+  min-height: 40vh;
   height: 100vh;
   display: flex;
   /* align-items: center; */
   justify-content: center;
-  padding: 15rem;
+  padding: 10rem;
   background-color: #003f50;
   color: var(--color-white);
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   position: relative; }
-  @media only screen and (max-width: 37.5em) {
+  @media only screen and (min-width: 18.75em) and (max-width: 37.43em) {
     .about {
-      padding: 10rem; } }
+      padding: 8rem; } }
   .about__text {
     width: 50rem;
     height: min-content;
@@ -274,7 +277,7 @@ body {
   padding: 1rem;
   border-radius: 6px;
   position: relative; }
-  @media only screen and (max-width: 37.5em) {
+  @media only screen and (min-width: 37.5em) and (max-width: 47.93em) {
     .project-card {
       width: 40rem;
       height: 35rem; } }
