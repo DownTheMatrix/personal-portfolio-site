@@ -10,18 +10,19 @@
 
         &-heading {  // h2
             font-size: 3.2rem;
+            font-family: var(--font-primary);
         }
     }
 }
 
-.projects-container {
+.projects-container {  // div
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     margin: 5rem 0;
 }
 
-.project-card {
+.project-card {  // figure
     width: 35rem;
     height: 35rem;
     border: 2px solid black;
@@ -35,15 +36,14 @@
         height: 35rem;
     }
 
-    &__img {
+    &__img {  // img
         width: 100%;
         height: 100%;
         transition: all .5s;
         backface-visibility: hidden;
     }
 
-    &__caption {
-        font-size: 1.6rem;
+    &__caption {  // figcaption
         position: absolute;
         top: 50%;
         left: 50%;
@@ -54,10 +54,21 @@
         transition: all .5s;
         backface-visibility: hidden;
 
+        &-heading {  // h4
+            font-size: 2rem;
+            font-family: var(--font-primary);
+            padding: 1rem;
+        }
+
+        &-text {  // p
+            font-size: 1.6rem;
+            font-family: var(--font-secondary);
+        }
+
         &-link:link,
-        &-link:visited {
+        &-link:visited {  // a
             text-decoration: underline;
-            color: white;
+            color: var(--color-white);
             text-transform: uppercase;
         }
     }
@@ -72,11 +83,11 @@
     }
 }
 
-.button-container {
+.button-container {  // div
 
     &__button {
         &:link,
-        &:visited {
+        &:visited {  // a
             padding: 1.5rem 6.5rem;
             background: transparent;
             cursor: pointer;
@@ -88,9 +99,11 @@
             text-decoration: none;
             font-size: 1.4rem;
             margin-bottom: 5rem;
+            font-family: var(--font-secondary);
         }
         
-        &:hover {
+        &:hover,
+        &:active {
             background-color: var(--color-bg);
             color: var(--color-white);
         }
