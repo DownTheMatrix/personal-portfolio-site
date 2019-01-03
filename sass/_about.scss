@@ -16,11 +16,14 @@
 
         &-heading {  // h2
             font-size: 3.2rem;
-            margin-bottom: 1rem;
+            margin-bottom: 2rem;
+            font-family: var(--font-primary);
+            font-weight: 700;
         }
 
         &-paragraph {  // p
             font-size: 2rem;
+            font-family: var(--font-secondary);
         }
     }
 }
