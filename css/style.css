@@ -57,7 +57,7 @@ body {
   box-shadow: 0 0.7rem 2rem 0 rgba(0, 0, 0, 0.2), 0 0.4rem 1rem 0 rgba(0, 0, 0, 0.2); }
   .navbar .navlist {
     font-family: var(--font-primary); }
-    .navbar .navlist__link:link, .navbar .navlist__link:visited {
+    .navbar .navlist__link__link:link, .navbar .navlist__link__link:visited {
       display: block;
       width: 100%;
       text-align: center;
@@ -67,8 +67,8 @@ body {
       text-decoration: none;
       background-color: #003f50;
       color: var(--color-grey);
-      transition: all .2s; }
-      .navbar .navlist__link:link:hover, .navbar .navlist__link:link:active, .navbar .navlist__link:visited:hover, .navbar .navlist__link:visited:active {
+      transition: all 0.2s; }
+      .navbar .navlist__link__link:link:hover, .navbar .navlist__link__link:link:active, .navbar .navlist__link__link:visited:hover, .navbar .navlist__link__link:visited:active {
         background-color: var(--color-tertiary);
         color: var(--color-white);
         border-bottom: 2px solid var(--color-yellow); }
