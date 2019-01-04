@@ -1,46 +1,49 @@
-.skills {
-    min-height: 100vh;
+.skills {  // section
+    min-height: min-content;
+    height: 100vh;
     padding: 6rem;
     text-align: center;
-    background-color: var(--color-bg);
-    color: white;
-    /* transform: skewY(-7deg); */
+    background-color: lighten($color-bg, 10%);;
     -webkit-clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
     clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
 
-   /*  & > * {
-        transform: skewY(7deg);
-    }
- */
-    &__title {
+    &__title {  // div
         margin-top: 10rem;
         width: 100%;
         height: auto;
 
-        &-heading {
+        @include respond(tab-port) {
+            margin-top: 18rem;
+        }
+
+        &-heading {  // h3
             font-size: 3.2rem;
+            font-family: $font-primary;
+            color: $color-white;
         }
     }
 }
 
-.skills-container {
+.skills-container {  // div
     display: flex;
     justify-content: center;
     padding: 8rem 0;
     flex-wrap: wrap;
 }
 
-.skill-card {
+.skill-card {  // div
     padding: 2.5rem;
     min-width: 20rem;
+    width: 25rem;
     min-height: min-content;
-    box-shadow: 0 1px 3px rgba(var(--color-black), .4), 0 1px 2px rgba(var(--color-black), .4);
+    box-shadow: 0 .1rem .3rem rgba($color-black, .4), 0 .1rem .2rem rgba($color-black, .4);
     margin: 2rem 2rem;
-    border-radius: 3px;
-    border: 5px solid var(--color-grey);
+    border-radius: 4px;
+    border: 2px solid $color-yellow;
+    background-color: lighten($color-bg, 4%);
 
     &:hover {
-        box-shadow: 0 1.4rem 2.8rem rgba(var(--color-black), 0.2), 0 1rem 1rem rgba(var(--color-black), 0.2);
+        box-shadow: 0 1.4rem 2.8rem rgba($color-black, 0.6), 0 1rem 1rem rgba($color-black, 0.6);
     }
 
     &:hover &__header {
@@ -55,44 +58,53 @@
         transform: scale(1.5);
     }
 
-    &__header {
+    &__header {  // div
         text-align: center;
     }
 
-    &__icon {
+    &__icon {  // svg
         width: 3.5rem;
         height: 3.5rem;
         margin-bottom: 1rem;
         transition: all .5s;
     }
 
-    &__body {
+    &__body {  // div
         text-align: center;
     }
 
-    &__heading {
+    &__heading {  // h3
         font-size: 2rem;
         text-transform: uppercase;
         font-weight: 700;
+        font-family: $font-primary;
+        color: $color-white;
     }
 
-    &__text {
-        font-size: 1.4rem;
+    &__text {  // p
+        font-size: 1.6rem;
         padding: .4rem;
         text-transform: capitalize;
+        font-family: $font-secondary;
+        font-weight: 600;
+        color: $color-white;
     }
 
-    &__list {
+    &__list {  // ul
         list-style: none;
         opacity: 0;
         transition: all .8s;
+        margin-top: 0.5rem;
 
-        &__item {
+        &__item {  // li
             font-size: 1.4rem;
+            font-family: $font-secondary;
+            font-weight: 600;
+            color: lighten($color-grey, 10%);
         }
     }
 }
 
 .icon-js {
-    background-color: var(--color-grey);
+    background-color: $color-text;
 }
