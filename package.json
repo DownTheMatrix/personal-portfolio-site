@@ -4,12 +4,14 @@
   "description": "My personal portfolio website",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "watch:sass": "node-sass sass/main.scss css/style.css -w"
+    "watch:sass": "node-sass sass/main.scss dist/css/style.css -w",
+    "prefix:css": "postcss --use autoprefixer -b \"last 10 versions\" dist/css/style.css -o dist/css/style.prefix.css"
   },
   "author": "Bruno Mazza",
   "license": "ISC",
   "devDependencies": {
-    "node-sass": "^4.11.0"
+    "autoprefixer": "^9.4.4",
+    "node-sass": "^4.11.0",
+    "postcss-cli": "^6.1.1"
   }
 }
