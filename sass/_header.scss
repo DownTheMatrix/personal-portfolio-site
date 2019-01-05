@@ -1,8 +1,9 @@
 .header {
     background-color: var(--color-bg);
-    min-height: 100vh;
+    min-height: 40vh;
+    height: 100vh;
+    width: 100%;
     display: flex;
-    /* margin: 2rem 2rem 0 2rem; */
     /* -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); */
     position: relative;
@@ -15,6 +16,8 @@
             font-size: 6rem;
             text-transform: uppercase;
             color: var(--color-grey);
+            font-family: var(--font-primary);
+            letter-spacing: 1.2rem;
 
             .hl {  // span
                 color: var(--color-yellow);
@@ -22,9 +25,11 @@
         }
 
         &-heading-secondary {  // h2
-            font-size: 3.5rem;
+            font-size: 2.8rem;
             text-transform: uppercase;
             color: var(--color-grey);
+            font-family: var(--font-secondary);
+            letter-spacing: .4rem;
         }
     }
 }

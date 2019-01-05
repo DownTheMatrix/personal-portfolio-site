@@ -1,34 +1,32 @@
 .footer {  // footer
-    min-height: 20vh;
+    min-height: min-content;
     height: 20vh;
-    background-color: #133175;
+    width: 100%;
+    background-color: $color-bg;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 2rem;
-    position: relative;
+    padding: 4rem;
 
     &__text {  // p
         font-size: 2rem;
-        color: var(--color-white);
-        margin-bottom: 6rem;
+        color: var(--color-grey);
+        margin-bottom: 4rem;
+        font-family: var(--font-secondary);
     }
 }
 
-.arrow {
+.arrow {  // div
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    bottom: .5rem;
-    left: 0;
-    transform: translate(-0%, -0%);
+    margin-bottom: 1rem;
 
-    &__icon {
+    &__icon {  // svg
         width: 5.5rem;
         height: 5.5rem;
-        fill: var(--color-grey);
+        fill: $color-grey;
     }
 }

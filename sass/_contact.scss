@@ -4,6 +4,11 @@
     padding: 6rem;
     text-align: center;
     background-color: lighten(#002B36, 5%);
+    width: 100%;
+
+    @include respond(desktop) {  // min-width: 1024px
+        height: 30vh;
+    }
 
     &__title {  // div
         width: 100%;
