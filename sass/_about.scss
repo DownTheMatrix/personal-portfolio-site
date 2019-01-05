@@ -6,10 +6,10 @@
     align-items: flex-start;
     justify-content: center;
     padding: 10rem;
-    background-color: lighten($color-bg, 5%);
-    color: $color-white;
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    /* background-color: lighten($color-bg, 5%); */
+    background-image: linear-gradient(to bottom, lighten($color-bg, 18%), lighten($color-bg, 23%));
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 70vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 70vh, 0 100%);
     position: relative;
 
     @include respond(phone-sm) {  // 300px to 599px
@@ -42,11 +42,13 @@
             text-transform: capitalize;
             padding: 2rem;
             margin-bottom: 2rem;
+            color: lighten($color-grey, 30%);
         }
 
         &-paragraph {  // p
             font-size: 2rem;
             font-family: $font-secondary;
+            color: lighten($color-grey, 30%);
         }
     }
 }
