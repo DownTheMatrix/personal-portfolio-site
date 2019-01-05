@@ -1,6 +1,7 @@
 .work {  // section
     min-height: min-content;
     height: 100vh;
+    width: 100%;
     overflow-x: hidden;
     padding: 6rem;
     text-align: center;
@@ -20,7 +21,7 @@
 
         &-heading {  // h2
             font-size: 3.2rem;
-            font-family: var(--font-primary);
+            font-family: $font-primary;
         }
     }
 }
@@ -28,22 +29,33 @@
 .projects-container {  // div
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     margin: 5rem 0;
+
+    @include respond(tab) {  // from 0 to 1080px
+        flex-wrap: wrap;
+    }
 }
 
 .project-card {  // figure
-    width: 35rem;
-    height: 35rem;
+   /*  min-width: 30rem; */
+    width: 30rem;
+    /* min-height: 30rem; */
+    height: 30rem;
     border: 2px solid black;
-    margin: 2rem;
+    margin: 1rem;
     padding: 1rem;
     border-radius: 6px;
     position: relative;
 
-    @include respond(phone) {
-        width: 40rem;
+    @include respond(phone) {  // from 0 to 600px
+        width: 35rem;
         height: 35rem;
+    }
+
+    @include respond(tab) {  // from 1024px on
+        width: 28rem;
+        height: 28rem;
     }
 
     &__img {  // img
@@ -58,7 +70,7 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, 0);
-        color: var(--color-white);
+        color: $color-white;
         text-align: center;
         opacity: 0;
         transition: all .5s;
@@ -66,19 +78,19 @@
 
         &-heading {  // h4
             font-size: 2rem;
-            font-family: var(--font-primary);
+            font-family: $font-primary;
             padding: 1rem;
         }
 
         &-text {  // p
             font-size: 1.6rem;
-            font-family: var(--font-secondary);
+            font-family: $font-secondary;
         }
 
         &-link:link,
         &-link:visited {  // a
             text-decoration: underline;
-            color: var(--color-white);
+            color: $color-white;
             text-transform: uppercase;
         }
     }
@@ -102,21 +114,21 @@
             background: transparent;
             cursor: pointer;
             text-transform: uppercase;
-            color: var(--color-black);
-            border: 2px solid var(--color-blue-dark);
+            color: $color-black;
+            border: 2px solid $color-blue-light;
             border-radius: 6px;
             transition: all .2s;
             text-decoration: none;
             font-size: 1.4rem;
             margin-bottom: 5rem;
-            font-family: var(--font-secondary);
+            font-family: $font-secondary;
             font-weight: 700;
         }
         
         &:hover,
         &:active {
-            background-color: var(--color-blue-light);
-            color: var(--color-white);
+            background-color: lighten($color-bg, 20%);
+            color: $color-white;
         }
 
         &:focus {
@@ -124,3 +136,5 @@
         }
     }
 }
+
+/* lighten($color-bg, 20%), lighten($color-bg, 25%) */
