@@ -20,7 +20,10 @@
         background-color: lighten($color-bg, 5%);
         color: $color-grey;
         transition: all 0.2s;
-        border-right: 2px solid $color-bg;
+        
+        &:not(:last-child) {
+          border-right: 2px solid $color-bg;
+        }
 
         &:hover,
         &:active {
