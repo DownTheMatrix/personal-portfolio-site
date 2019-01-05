@@ -1,37 +1,41 @@
 /* Navigation */
-.navbar {
-  background-color: var(--color-bg);
+.navbar {  // nav
+  background-color: $color-bg;
   z-index: 100;
   position: relative;
-  box-shadow: 0 7px 20px 0 rgba(0,0,0,0.2), 0 4px 10px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 0.7rem 2rem 0 rgba(0, 0, 0, 0.2),
+    0 0.4rem 1rem 0 rgba(0, 0, 0, 0.2);
 
-  .navlist {
-    &__link:link,
-    &__link:visited {
-      display: block;
-      width: 100%;
-      text-align: center;
-      padding: 1em;
-      font-size: 2rem;
-      text-transform: uppercase;
-      text-decoration: none;
-      background-color: var(--color-bg);
-      color: var(--color-grey);
-      transition: all .2s;
-  
-      &:hover,
-      &:active {
-          background-color: var(--color-tertiary);
-          color: var(--color-white);
-          border-bottom: 2px solid var(--color-yellow);
+  .navlist {  // ul
+    font-family: $font-primary;
+
+      &__link:link,
+      &__link:visited {  // a
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 1em;
+        font-size: 2rem;
+        text-transform: uppercase;
+        text-decoration: none;
+        background-color: lighten($color-bg, 5%);
+        color: $color-grey;
+        transition: all 0.2s;
+
+        &:hover,
+        &:active {
+          background-color: $color-tertiary;
+          color: $color-white;
+          border-bottom: 2px solid $color-yellow;
+        }
       }
-    }
   }
-  
-  &__toggle {
+
+  &__toggle {  // svg
     padding: 1rem;
-    fill: var(--color-white);
-    background-color: darkslategrey;
+    border-radius: 10%;
+    fill: $color-white;
+    background-color: $color-tertiary;
     vertical-align: middle;
     width: 5.5rem;
     height: 5.5rem;
@@ -44,23 +48,23 @@
 }
 
 @include respond(smartphone) {
-    .navbar {
-        display: flex;
-    
-        .navlist {
-          display: flex;
-          flex: 1;
-          justify-content: center;
+  .navbar {
+    display: flex;
 
-          &__link {
-            width: auto;
-          }
-        }
-    
-        &__toggle {
-          display: none;
-        }
+    .navlist {
+      display: flex;
+      flex: 1;
+      justify-content: center;
+
+      &__link {
+        width: auto;
       }
+    }
+
+    &__toggle {
+      display: none;
+    }
+  }
 }
 
 .navbar {
@@ -68,7 +72,7 @@
     display: none;
 
     @include respond(smartphone) {
-        display: flex;
+      display: flex;
     }
   }
 }
@@ -76,10 +80,10 @@
 @include respond(tab-port) {
   .navbar.active {
     .navbar__toggle {
-        background-color: rgb(52, 95, 95);
-        fill: var(--color-white);
+      background-color: $color-tertiary;
+      fill: $color-white;
     }
-    
+
     ul {
       display: block;
     }
