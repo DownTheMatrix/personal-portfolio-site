@@ -1,6 +1,6 @@
 /* Navigation */
 .navbar {  // nav
-  background-color: $color-bg;
+  background-image: linear-gradient(to right, lighten($color-bg, 10%), lighten($color-bg, 15%));
   z-index: 100;
   position: relative;
   width: 100%;
@@ -17,17 +17,17 @@
         font-size: 2rem;
         text-transform: uppercase;
         text-decoration: none;
-        background-color: lighten($color-bg, 5%);
-        color: $color-grey;
+        /* background-color: lighten($color-bg, 5%); */
+        color: lighten($color-grey, 15%);
         transition: all 0.2s;
         
         &:not(:last-child) {
-          border-right: 2px solid $color-bg;
-        }
+          border-right: 2px solid $color-grey;
+        } 
 
         &:hover,
         &:active {
-          background-color: $color-tertiary;
+          background-color: lighten($color-bg, 10%);
           color: $color-white;
           border-bottom: 2px solid $color-yellow;
         }
@@ -38,7 +38,7 @@
     padding: 1rem;
     border-radius: 10%;
     fill: $color-white;
-    background-color: $color-tertiary;
+    background-color: lighten($color-bg, 10%);
     vertical-align: middle;
     width: 5.5rem;
     height: 5.5rem;
@@ -83,7 +83,7 @@
 @include respond(tab-port) {
   .navbar.active {
     .navbar__toggle {
-      background-color: $color-tertiary;
+      background-color: lighten($color-bg, 10%);
       fill: $color-white;
     }
 
