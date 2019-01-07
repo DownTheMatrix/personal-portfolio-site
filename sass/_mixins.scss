@@ -1,22 +1,20 @@
-/* Media Queries Manager */
-/*
-0 - 600px:        Phone
-600 - 900px:      Tablet Portrait
-768px      :      Smartphone
-900 - 1200px:     Tablet Landscape
-[1200 - 1800px]:  Standard Desktop
-1800px + :        Large Desktop
-
-$breakpoint args:
-- phone
-- smartphone
-- tab-port
-- tab-land
-- desk-lg
-
-Note: 1em = 16px
+/* Media Queries Manager
+    Note: 1em = 16px
 */
+
 @mixin respond($breakpoint) {
+  @if $breakpoint == phone-xm {
+    @media only screen and (min-width: 18.75em) and (max-width: 25.93em) {  // 300px to 415px
+      @content;
+    }
+  }
+
+  @if $breakpoint == phone-sm {
+    @media only screen and (min-width: 18.75em) and (max-width: 37.43em) {  // 300px to 599px
+      @content;
+    }
+  }
+
   @if $breakpoint == phone {
     @media only screen and (max-width: 37.5em) {  // 600px / 16px
       @content;
@@ -26,7 +24,13 @@ Note: 1em = 16px
   @if $breakpoint == smartphone {
     @media only screen and (min-width: 48em) {  // 768px / 16px
       @content;
-    } 
+    }
+  }
+
+  @if $breakpoint == tab-md {
+    @media only screen and (min-width: 43.75em) {  // from 700px
+      @content;
+    }
   }
 
   @if $breakpoint == tab-port {
@@ -35,14 +39,26 @@ Note: 1em = 16px
     }
   }
 
-  @if $breakpoint == tab-land {
-    @media only screen and (max-width: 75em) {  // 1200px / 16px
+  @if $breakpoint == tab-lg {
+    @media only screen and (min-width: 56.25em) {  // 900px
       @content;
     }
   }
-  
-  @if $breakpoint == desk-lg {
-    @media only screen and (max-width: 112.5em) {  // 1800px / 16px
+
+  @if $breakpoint == desktop {
+    @media only screen and (min-width: 64em) {  // 1024px
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab {
+    @media only screen and (max-width: 67.5em) {  // 1080px
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-land {
+    @media only screen and (min-width: 75em) {  // 1200px / 16px
       @content;
     }
   }
