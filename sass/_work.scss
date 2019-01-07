@@ -30,9 +30,9 @@
             
             &::after {
                 content: "";
-                width: 15rem;
+                width: 10rem;
                 height: .2rem;
-                background-color: $color-bg;
+                background-color: rgba($color-bg, .8);
                 position: absolute;
                 bottom: -1rem;
                 left: 50%;
