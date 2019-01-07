@@ -121,7 +121,7 @@ body {
       letter-spacing: .4rem; }
 
 .about {
-  min-height: 60vh;
+  min-height: min-content;
   height: 100vh;
   width: 100%;
   display: flex;
@@ -142,6 +142,11 @@ body {
   @media only screen and (min-width: 64em) {
     .about {
       height: 80vh; } }
+  @media (orientation: landscape) {
+    .about {
+      padding: 0;
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 100vh, 0 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 100vh, 0 100%); } }
   @media only screen and (min-width: 75em) {
     .about {
       -webkit-clip-path: polygon(0 0, 100% 0, 100% 100vh, 0 100%);
@@ -156,6 +161,10 @@ body {
     align-items: center;
     flex-direction: column;
     margin-bottom: 20rem; }
+    @media (orientation: landscape) {
+      .about__text {
+        margin-bottom: 0;
+        justify-content: flex-start; } }
     @media only screen and (min-width: 18.75em) and (max-width: 25.93em) {
       .about__text {
         height: min-content;
@@ -179,6 +188,11 @@ body {
 .portrait {
   width: 15rem;
   height: 15rem; }
+  @media (orientation: landscape) {
+    .portrait {
+      width: 10rem;
+      height: 10rem;
+      margin-top: 1rem; } }
   @media only screen and (min-width: 64em) {
     .portrait {
       width: 20rem;
@@ -211,6 +225,10 @@ body {
       min-height: 100vh;
       -webkit-clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
       clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%); } }
+  @media (orientation: landscape) {
+    .skills {
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 100vh, 0 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 100vh, 0 100%); } }
   .skills__title {
     margin-top: 10rem;
     width: 100%;
