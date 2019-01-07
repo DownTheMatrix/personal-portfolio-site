@@ -1,80 +1,108 @@
 .contact {  // section
-    min-height: min-content;
-    height: 40vh;
-    padding: 6rem;
-    text-align: center;
-    background-image: linear-gradient(to top, lighten($color-bg, 18%), lighten($color-bg, 23%));
+  min-height: min-content;
+  height: 40vh;
+  padding: 6rem;
+  text-align: center;
+  background-image: linear-gradient(
+    to top,
+    lighten($color-bg, 18%),
+    lighten($color-bg, 23%)
+  );
+  width: 100%;
+
+  @include respond(phone) {
+    height: 30vh;
+  }
+
+  @include respond(desktop) {  // min-width: 1024px
+    height: 30vh;
+  }
+
+  &__title {  // div
     width: 100%;
+    margin-bottom: 5rem;
+
+    &-heading {  // h2
+      font-size: 3.2rem;
+      color: lighten($color-grey, 30%);
+      font-family: $font-primary;
+    }
+  }
+}
+
+.contact-container { // div
+
+  .social-container {  // div
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 8rem 0;
+    flex-wrap: wrap;
 
     @include respond(phone) {
-        height: 30vh;
+      flex-wrap: nowrap;
+      margin: 0;
     }
 
-    @include respond(desktop) {  // min-width: 1024px
-        height: 30vh;
-    }
+    &__link {  // a
+      &:link,
+      &:visited {
+        text-decoration: none;
+        margin: 1rem;
+        padding: 1.5rem 1.8rem;
+        border-radius: 50%;
+        background-color: lighten($color-grey, 30%);
+        border: 1px solid $color-grey;
+        transition: all 0.4s;
+        box-shadow: 0 0.2rem 0.6rem 0 rgba($color-black, 0.4),
+          0 0.1rem 0.5rem 0 rgba($color-black, 0.4);
+        transform: scale(1);
 
-    &__title {  // div
-        width: 100%;
-        margin-bottom: 5rem;
-
-        &-heading {  // h2
-            font-size: 3.2rem;
-            color: lighten($color-grey, 30%);
-            font-family: $font-primary;
+        @include respond(phone) {  // from to 600px
+          margin: 0;
+          transform: scale(0.9);
         }
+      }
+
+      &:hover,
+      &:active {
+        background-color: lighten($color-yellow, 10%);
+        box-shadow: 0 0.7rem 2rem 0 rgba($color-black, 0.6),
+          0 0.4rem 1rem 0 rgba($color-black, 0.6);
+      }
     }
+
+    &__icon {  // svg
+      width: 3.5rem;
+      height: 3.5rem;
+
+      @include respond(phone) {
+        width: 3rem;
+        height: 3rem;
+      }
+    }
+  }
 }
- 
-.contact-container {  // div
 
-    .social-container {  // div
-        list-style-type: none;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 8rem 0;
-        flex-wrap: wrap;
+.download {  // div
+    min-height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2.5rem;
 
-        @include respond(phone) {
-            flex-wrap: nowrap;
-            margin: 0;
-        }
+  &__link:link,
+  &__link:visited {  // a
+    font-size: 2rem;
+    color: $color-white;
+    text-transform: uppercase;
+    padding: 1rem;
+    text-decoration: none;
 
-        &__link {  // a
-             &:link,
-             &:visited {
-                text-decoration: none;
-                margin: 1rem;
-                padding: 1.5rem 1.8rem;
-                border-radius: 50%;
-                background-color: lighten($color-grey, 30%);
-                border: 1px solid $color-grey;
-                transition: all .4s;
-                box-shadow: 0 .2rem .6rem 0 rgba($color-black, 0.4), 0 .1rem .5rem 0 rgba($color-black, 0.4);
-                transform: scale(1);
-
-                @include respond(phone) {  // from to 600px
-                    margin: 0;
-                    transform: scale(0.9);
-                }
-            }
-
-            &:hover,
-            &:active {
-                background-color: lighten($color-yellow, 10%);
-                box-shadow: 0 .7rem 2rem 0 rgba($color-black, 0.6), 0 .4rem 1rem 0 rgba($color-black, 0.6);
-            }
-        }
-
-        &__icon {  // svg
-            width: 3.5rem;
-            height: 3.5rem;
-
-            @include respond(phone) {
-                width: 3rem;
-                height: 3rem;
-            }
-        }
+    &:hover,
+    &:active {
+        border-bottom: 3px solid $color-yellow;
     }
+  }
 }
