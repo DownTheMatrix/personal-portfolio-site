@@ -26,7 +26,7 @@
       display: block;
       width: 100%;
       text-align: center;
-      padding: 1em;
+      padding: 2rem;
       font-size: 2rem;
       text-transform: uppercase;
       text-decoration: none;
@@ -38,7 +38,7 @@
       &:active {
         background-color: lighten($color-bg, 10%);
         color: $color-white;
-        border-bottom: 1px solid $color-yellow;
+        border-bottom: 2px solid $color-yellow;
       }
     }
   }
@@ -80,7 +80,7 @@
 }
 
 .navbar {
-  ul {
+  .navlist {
     display: none;
 
     @include respond(smartphone) {
@@ -96,7 +96,7 @@
       fill: $color-white;
     }
 
-    ul {
+    .navlist {
       display: block;
     }
   }
