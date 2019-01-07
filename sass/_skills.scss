@@ -5,8 +5,13 @@
     padding: 6rem;
     text-align: center;
     background-image: linear-gradient(to top, lighten($color-bg, 20%), lighten($color-bg, 25%));
-    -webkit-clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
+    /* -webkit-clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
     clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
+ */
+    @include respond(landscape) {  // 300px to 599px
+        -webkit-clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
+        clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
+    }
 
     @include respond(tab-port) {  // max-width: 900px
         padding: 4rem;
@@ -24,11 +29,6 @@
         min-height: 100vh;
         -webkit-clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
         clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
-    }
-
-    @include respond(land-scape) {
-        -webkit-clip-path: polygon(0 0, 100% 0, 100% 100vh, 0 100%);
-        clip-path: polygon(0 0, 100% 0, 100% 100vh, 0 100%);
     }
 
     &__title {  // div
