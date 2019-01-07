@@ -1,16 +1,20 @@
 .about {  // section
-    min-height: 40vh;
+    min-height: 60vh;
     height: 100vh;
     width: 100%;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
     padding: 10rem;
-    /* background-color: lighten($color-bg, 5%); */
     background-image: linear-gradient(to bottom, lighten($color-bg, 18%), lighten($color-bg, 23%));
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 70vh, 0 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 70vh, 0 100%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
     position: relative;
+
+    @include respond(phone-xm) {  // 300px to 415px
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 90vh, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 90vh, 0 100%);
+    }
 
     @include respond(phone-sm) {  // 300px to 599px
         padding: 6rem;
@@ -20,19 +24,29 @@
        height: 80vh;
     }
 
+    @include respond(tab-land) {
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 100vh, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 100vh, 0 100%);
+        min-height: 100vh;
+    }
+
     &__text {  // div
-        width: 70vw;
-        min-height: min-content;
-        height: 30vh;
+        width: 55rem;
+        height: 55rem;
         text-align: center;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        margin-bottom: 5rem;
+        margin-bottom: 20rem;
 
-        @include respond(desktop) {
-            margin-bottom: 15rem;
+        @include respond(phone-xm) {  // 300px to 415px
+            height: min-content;
+            margin-bottom: 8rem;
+        }
+
+        @include respond(desktop) {  // min-width 1024px
+            margin-bottom: 10rem;
         }
 
         &-heading {  // h2
@@ -41,7 +55,7 @@
             font-weight: 700;
             text-transform: capitalize;
             padding: 2rem;
-            margin-bottom: 2rem;
+            margin-bottom: 1rem;
             color: lighten($color-grey, 30%);
         }
 
@@ -50,5 +64,16 @@
             font-family: $font-secondary;
             color: lighten($color-grey, 30%);
         }
+    }
+}
+
+.portrait {  // figure
+    width: 15rem;
+    height: 15rem;
+
+    &__img {  // img
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
     }
 }
