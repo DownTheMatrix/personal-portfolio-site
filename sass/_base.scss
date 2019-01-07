@@ -1,3 +1,25 @@
+/* Solar Theme */
+$color-bg: #002B36;
+$color-yellow: #B58900;
+$color-grey: #839496;
+
+/* Base Colors */
+$color-white: #fff;
+$color-black: #000;
+
+/* Extra */
+$color-tertiary: #345f5f;
+
+/* Blu Hues */
+$color-blue-dark: #041948;
+$color-blue-md: #092461;
+$color-blue-light: #20418E;
+$color-text: #3B5798;
+
+/* Typography */
+$font-primary: "Raleway", sans-serif;
+$font-secondary: "Open Sans", sans-serif;
+
 *,
 *::before,
 *::after {
@@ -21,26 +43,5 @@ body {
     line-height: 1.6;
     width: 100%;
     height: 100%;
+    background-color: lighten($color-grey, 40%);;
 }
-
-/* Solar Theme */
-$color-bg: #002B36;
-$color-yellow: #B58900;
-$color-grey: #839496;
-
-/* Base Colors */
-$color-white: #fff;
-$color-black: #000;
-
-/* Extra */
-$color-tertiary: #345f5f;
-
-/* Blu Hues */
-$color-blue-dark: #041948;
-$color-blue-md: #092461;
-$color-blue-light: #20418E;
-$color-text: #3B5798;
-
-/* Typography */
-$font-primary: "Raleway", sans-serif;
-$font-secondary: "Open Sans", sans-serif;
