@@ -26,11 +26,24 @@
       font-size: 3.2rem;
       color: lighten($color-grey, 30%);
       font-family: $font-primary;
+
+      position: relative;
+
+      &::after {
+        content: "";
+        width: 10rem;
+        height: 0.2rem;
+        background-color: rgba($color-yellow, .5);
+        position: absolute;
+        bottom: -1rem;
+        left: 50%;
+        transform: translate(-50%, 0%);
+      }
     }
   }
 }
 
-.contact-container { // div
+.contact-container {  // div
 
   .social-container {  // div
     list-style-type: none;
@@ -86,11 +99,11 @@
 }
 
 .download {  // div
-    min-height: 5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 2.5rem;
+  min-height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2.5rem;
 
   &__link:link,
   &__link:visited {  // a
@@ -99,10 +112,11 @@
     text-transform: uppercase;
     padding: 1rem;
     text-decoration: none;
+    font-family: $font-secondary;
 
     &:hover,
     &:active {
-        border-bottom: 3px solid $color-yellow;
+      border-bottom: 3px solid $color-yellow;
     }
   }
 }
