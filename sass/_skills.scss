@@ -32,7 +32,11 @@
         height: auto;
 
         @include respond(tab-port) {  // max-width 900px
-            margin-top: 18rem;
+            margin-top: 15rem;
+        }
+
+        @include respond(tab-land) {  
+            margin-top: 5rem;
         }
 
         &-heading {  // h3
