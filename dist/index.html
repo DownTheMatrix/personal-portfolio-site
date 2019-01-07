@@ -7,24 +7,58 @@
     <meta name="author" content="Bruno Mazza" />
     <meta name="description" content="Front End Developer" />
     <title>Bruno Mazza // Front-End Developer</title>
-    <link rel="stylesheet" href="css/style.prefix.css" />
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Raleway:400,700" rel="stylesheet">
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../icon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../icon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../icon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="../icon/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="../icon/safari-pinned-tab.svg"
+      color="#2d89ef"
+    />
+    <meta name="msapplication-TileColor" content="#2d89ef" />
+    <meta name="theme-color" content="#006883" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Raleway:400,700"
+      rel="stylesheet"
+    />
   </head>
   <body>
-
     <!-- Navigation -->
     <nav class="navbar" id="menu">
-
       <svg class="navbar__toggle">
         <title>Hamburger Menu</title>
         <use href="../img/sprites.svg#icon-menu3"></use>
       </svg>
 
       <ul class="navlist">
-        <a href="#about-me" class="navlist__link">About</a>
-        <a href="#recent-work" class="navlist__link">Work</a>
-        <a href="#skill-set" class="navlist__link">Skillset</a>
-        <a href="#contact-me" class="navlist__link">Contact</a>
+        <li class="navlist__item">
+          <a href="#about-me" class="navlist__link">About</a>
+        </li>
+        <li class="navlist__item">
+          <a href="#recent-work" class="navlist__link">Work</a>
+        </li>
+        <li class="navlist__item">
+          <a href="#skill-set" class="navlist__link">Skillset</a>
+        </li>
+        <li class="navlist__item">
+          <a href="#contact-me" class="navlist__link">Contact</a>
+        </li>
       </ul>
     </nav>
 
@@ -40,13 +74,19 @@
 
     <!-- Section: About -->
     <section class="about" id="about-me">
-
       <div class="about__text">
+
+        <figure class="portrait">
+          <img class="portrait__img" src="../img/portrait.svg" alt="Personal Avatar">
+        </figure>
+
         <h2 class="about__text-heading">Hi there!</h2>
         <p class="about__text-paragraph">
-         Welcome to my portfolio page. I'm a Web Developer with a Literature and Philosophy background. 
-         My journey started 1 year ago, and I never stopped learning new and exciting things since then. 
-         I like creating simple and neat designs and I'm eager to bring my skills to the next level!
+          Welcome to my portfolio page. I'm a Web Developer with a Literature
+          and Philosophy background. My journey started 1 year ago, and I never
+          stopped learning new and exciting things since then. I like creating
+          simple and neat designs and I'm eager to bring my skills to the next
+          level!
         </p>
       </div>
     </section>
@@ -96,8 +136,8 @@
               ><h4 class="project-card__caption-heading">My Reviews</h4></a
             >
             <p class="project-card__caption-text">
-              Offline-friendly web app with Leaflet.js which tracks
-              the most relevant reviews.
+              Offline-friendly web app with Leaflet.js which tracks the most
+              relevant reviews.
             </p>
           </figcaption>
         </figure>
@@ -145,7 +185,6 @@
       </div>
 
       <div class="skills-container">
-
         <!-- Skill Card - HTML5 -->
         <div class="skill-card">
           <div class="skill-card__header">
@@ -231,16 +270,25 @@
       </div>
 
       <div class="contact-container">
-
         <div class="social-container">
-          <a href="https://github.com/DownTheMatrix" class="social-container__link" target="_blank" rel="noopener">
+          <a
+            href="https://github.com/DownTheMatrix"
+            class="social-container__link"
+            target="_blank"
+            rel="noopener"
+          >
             <svg class="social-container__icon">
               <title>Github Icon</title>
               <use href="../img/sprites.svg#icon-github"></use>
             </svg>
           </a>
 
-          <a href="https://www.linkedin.com/in/bruno-mazza/" class="social-container__link" target="_blank" rel="noopener">
+          <a
+            href="https://www.linkedin.com/in/bruno-mazza/"
+            class="social-container__link"
+            target="_blank"
+            rel="noopener"
+          >
             <svg class="social-container__icon">
               <title>Linkedin Icon</title>
               <use href="../img/sprites.svg#icon-linkedin"></use>
@@ -259,22 +307,34 @@
             </svg>
           </a>
 
-          <a href="https://www.facebook.com/bruno.mazza" class="social-container__link" target="_blank" rel="noopener">
+          <a
+            href="https://www.facebook.com/bruno.mazza"
+            class="social-container__link"
+            target="_blank"
+            rel="noopener"
+          >
             <svg class="social-container__icon">
               <title>Facebook Icon</title>
               <use href="../img/sprites.svg#icon-facebook"></use>
             </svg>
           </a>
 
-          <a href="https://twitter.com/Bruno_Mazza87" class="social-container__link" target="_blank" rel="noopener">
+          <a
+            href="https://twitter.com/Bruno_Mazza87"
+            class="social-container__link"
+            target="_blank"
+            rel="noopener"
+          >
             <svg class="social-container__icon">
               <title>Twitter Icon</title>
               <use href="../img/sprites.svg#icon-twitter"></use>
             </svg>
           </a>
-
-        </div> <!-- .social-container/end -->
-        
+        </div>
+        <!-- .social-container/end -->
+        <div class="download">
+          <a class="download__link" href="../docs/Bruno Mazza - CV.pdf" download="Bruno Mazza - Front End Developer">Download Resume</a>
+        </div>
       </div>
     </section>
 
@@ -283,10 +343,10 @@
       <p class="footer__text">Bruno Mazza &copy; 2019</p>
 
       <div class="arrow">
-          <svg class="arrow__icon">
-            <title>Arrow Icon</title>
-            <use href="../img/sprites.svg#icon-circle-up"></use>
-          </svg>
+        <svg class="arrow__icon">
+          <title>Arrow Icon</title>
+          <use href="../img/sprites.svg#icon-circle-up"></use>
+        </svg>
       </div>
     </footer>
 
