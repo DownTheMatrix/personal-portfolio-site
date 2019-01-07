@@ -20,6 +20,12 @@
         height: 60vh;
     }
 
+    @include respond(tab-land) {  // min-width: 1200px
+        min-height: 100vh;
+        -webkit-clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
+        clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
+    }
+
     &__title {  // div
         margin-top: 10rem;
         width: 100%;
@@ -33,6 +39,18 @@
             font-size: 3.2rem;
             font-family: $font-primary;
             color: lighten($color-grey, 30%);
+            position: relative;
+
+            &::after {
+                content: "";
+                width: 10rem;
+                height: .2rem;
+                background-color: rgba($color-yellow, .5);
+                position: absolute;
+                bottom: -1rem;
+                left: 50%;
+                transform: translate(-50%, 0%)
+            }
         }
     }
 }
@@ -60,8 +78,7 @@
     margin: 2rem 2rem;
     border-radius: 4px;
     background-image: linear-gradient(to right bottom, lighten($color-bg, 5%), lighten($color-bg, 10%));
-    transition: all .2s;
-
+    transition: all .4s;
     
     @include respond(desktop) {  // min-width 1024px
         width: 20rem;
