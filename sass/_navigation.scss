@@ -1,37 +1,46 @@
 /* Navigation */
 .navbar {  // nav
-  background-image: linear-gradient(to right, lighten($color-bg, 10%), lighten($color-bg, 15%));
+  background-image: linear-gradient(
+    to right,
+    lighten($color-bg, 10%),
+    lighten($color-bg, 15%)
+  );
   z-index: 100;
   position: relative;
   width: 100%;
 
   .navlist {  // ul
     font-family: $font-primary;
+    list-style-type: none;
 
-      &__link:link,
-      &__link:visited {  // a
-        display: block;
-        width: 100%;
-        text-align: center;
-        padding: 1em;
-        font-size: 2rem;
-        text-transform: uppercase;
-        text-decoration: none;
-        /* background-color: lighten($color-bg, 5%); */
-        color: lighten($color-grey, 15%);
-        transition: all 0.2s;
-        
-        &:not(:last-child) {
-          border-right: 2px solid $color-grey;
-        } 
+    &__item {  // li
+      flex: 1 1 100%;
 
-        &:hover,
-        &:active {
-          background-color: lighten($color-bg, 10%);
-          color: $color-white;
-          border-bottom: 2px solid $color-yellow;
-        }
+      &:not(:last-child) {
+        border-right: 2px solid $color-grey;
       }
+    }
+
+    &__link:link,
+    &__link:visited {  // a
+      display: block;
+      width: 100%;
+      text-align: center;
+      padding: 1em;
+      font-size: 2rem;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: lighten($color-grey, 15%);
+      transition: all 0.2s;
+      font-family: inherit;
+
+      &:hover,
+      &:active {
+        background-color: lighten($color-bg, 10%);
+        color: $color-white;
+        border-bottom: 1px solid $color-yellow;
+      }
+    }
   }
 
   &__toggle {  // svg
