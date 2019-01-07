@@ -5,23 +5,39 @@
     overflow-x: hidden;
     padding: 6rem;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
     @include respond(tab-lg) {  // min-width 900px
         max-height: max-content;
     }
 
-    @include respond(desktop) {  // min-width 1024px
-        height: 80vh;
+    @include respond(tab-land) {  // min-width: 1200px
+        min-height: 100vh;
     }
 
     &__title {  // div
         width: 100%;
         height: auto;
-        margin-bottom: 5rem;
 
         &-heading {  // h2
             font-size: 3.2rem;
             font-family: $font-primary;
+            padding: 1rem;
+            position: relative;
+            
+            &::after {
+                content: "";
+                width: 15rem;
+                height: .2rem;
+                background-color: $color-bg;
+                position: absolute;
+                bottom: -1rem;
+                left: 50%;
+                transform: translate(-50%, 0%)
+            }
         }
     }
 }
@@ -38,9 +54,7 @@
 }
 
 .project-card {  // figure
-   /*  min-width: 30rem; */
     width: 30rem;
-    /* min-height: 30rem; */
     height: 30rem;
     border: 2px solid black;
     margin: 1rem;
@@ -120,9 +134,9 @@
             transition: all .2s;
             text-decoration: none;
             font-size: 1.4rem;
-            margin-bottom: 5rem;
             font-family: $font-secondary;
             font-weight: 700;
+            margin-bottom: 5rem;
         }
         
         &:hover,
@@ -130,11 +144,5 @@
             background-color: lighten($color-bg, 20%);
             color: $color-white;
         }
-
-        &:focus {
-            outline: none;
-        }
     }
 }
-
-/* lighten($color-bg, 20%), lighten($color-bg, 25%) */
