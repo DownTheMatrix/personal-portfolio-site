@@ -5,16 +5,14 @@
     padding: 6rem;
     text-align: center;
     background-image: linear-gradient(to top, lighten($color-bg, 20%), lighten($color-bg, 25%));
-    /* -webkit-clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
-    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
- */
-    @include respond(landscape) {  // 300px to 599px
+  
+    @include respond(landscape) { 
         -webkit-clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
         clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
     }
 
     @include respond(tab-port) {  // max-width: 900px
-        padding: 4rem;
+        padding: 1rem;
     }
 
     @include respond(tab-md) {  // min-width: 700px
@@ -26,7 +24,7 @@
     }
 
     @include respond(tab-land) {  // min-width: 1200px
-        min-height: 100vh;
+        min-height: min-content;
         -webkit-clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
         clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
     }
