@@ -7,11 +7,9 @@
     justify-content: center;
     padding: 10rem;
     background-image: linear-gradient(to bottom, lighten($color-bg, 18%), lighten($color-bg, 23%));
-    /* -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); */
     position: relative;
 
-    @include respond(landscape) {  // 300px to 568px
+    @include respond(landscape) {  
         -webkit-clip-path: polygon(0 0, 100% 0, 100% 90vh, 0 100%);
         clip-path: polygon(0 0, 100% 0, 100% 90vh, 0 100%);
         padding: 4rem;
@@ -22,9 +20,7 @@
     }
 
     @include respond(tab-land) {  // min-width 1200px
-        -webkit-clip-path: polygon(0 0, 100% 0, 100% 100vh, 0 100%);
-        clip-path: polygon(0 0, 100% 0, 100% 100vh, 0 100%);
-        min-height: 100vh;
+        min-height: min-content;
     }
 
     &__text {  // div
