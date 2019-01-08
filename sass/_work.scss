@@ -15,7 +15,7 @@
     }
 
     @include respond(tab-land) {  // min-width: 1200px
-        min-height: 100vh;
+        min-height: min-content;
     }
 
     &__title {  // div
@@ -120,6 +120,7 @@
 }
 
 .button-container {  // div
+    padding: 1.5rem;
 
     &__button {
         &:link,
