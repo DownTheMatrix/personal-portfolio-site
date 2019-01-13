@@ -92,6 +92,10 @@
         margin: 2rem 1rem;
     }
 
+    @include respond(tab-land) {
+        width: 25rem;
+    }
+
     &:hover {
         box-shadow: 0 1rem 1rem rgba($color-black, 0.4), 0 .4rem .4rem rgba($color-black, 0.4);
     }
