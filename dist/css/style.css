@@ -259,6 +259,9 @@ body {
     .skill-card {
       width: 20rem;
       margin: 2rem 1rem; } }
+  @media only screen and (min-width: 75em) {
+    .skill-card {
+      width: 25rem; } }
   .skill-card:hover {
     box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.4), 0 0.4rem 0.4rem rgba(0, 0, 0, 0.4); }
   .skill-card:hover .skill-card__header {
