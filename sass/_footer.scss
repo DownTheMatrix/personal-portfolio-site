@@ -36,6 +36,7 @@
         width: 5.5rem;
         height: 5.5rem;
         fill: lighten($color-grey, 30%);
+        transition: all .4s;
 
         &:hover {
             fill: $color-yellow;
