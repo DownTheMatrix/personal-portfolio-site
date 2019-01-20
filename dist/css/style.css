@@ -143,8 +143,7 @@ body {
     .about {
       min-height: min-content; } }
   .about__text {
-    width: 55rem;
-    height: 55rem;
+    width: 71rem;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -529,7 +528,8 @@ body {
   .arrow__icon {
     width: 5.5rem;
     height: 5.5rem;
-    fill: #d6dbdc; }
+    fill: #d6dbdc;
+    transition: all .4s; }
     .arrow__icon:hover {
       fill: #B58900;
       cursor: pointer; }
