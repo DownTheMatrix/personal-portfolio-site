@@ -43,13 +43,17 @@
 }
 
 .projects-container {  // div
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    flex-wrap: nowrap;
-    margin: 5rem 0;
+    flex-wrap: nowrap; */
+    margin: 5rem auto;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(28rem, 1fr));
+    grid-gap: 3rem;
 
     @include respond(tab) {  // from 0 to 1080px
-        flex-wrap: wrap;
+        /* flex-wrap: wrap; */
+        grid-template-columns: 1fr;
     }
 }
 
@@ -57,12 +61,12 @@
     width: 30rem;
     height: 30rem;
     border: 2px solid black;
-    margin: 1rem;
+    /* margin: 1rem; */
     padding: 1rem;
     border-radius: 6px;
     position: relative;
 
-    @include respond(phone) {  // from 0 to 600px
+    /* @include respond(phone) {  // from 0 to 600px
         width: 35rem;
         height: 35rem;
     }
@@ -70,7 +74,7 @@
     @include respond(tab) {  // from 1024px on
         width: 28rem;
         height: 28rem;
-    }
+    } */
 
     &__img {  // img
         width: 100%;
