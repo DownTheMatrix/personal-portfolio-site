@@ -1,6 +1,4 @@
 .footer {  // footer
-    min-height: min-content;
-    height: 20vh;
     width: 100%;
     background-image: linear-gradient(to top, lighten($color-bg, 5%), lighten($color-bg, 10%), lighten($color-bg, 15%));
     display: flex;
@@ -8,10 +6,6 @@
     align-items: center;
     flex-direction: column;
     padding: 4rem;
-
-    @include respond(desktop) {  // min-width 1024px
-        height: 10vh;
-    }
 
     &__text {  // p
         font-size: 2rem;

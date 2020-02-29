@@ -1,6 +1,6 @@
 .skills {  // section
     min-height: min-content;
-    height: 100vh;
+    height: 100%;
     width: 100%;
     padding: 6rem;
     text-align: center;
@@ -15,16 +15,7 @@
         padding: 1rem;
     }
 
-    @include respond(tab-md) {  // min-width: 700px
-        height: 80vh;
-    }
-
-    @include respond(desktop) {  // min-width 1024px
-        height: 60vh;
-    }
-
     @include respond(tab-land) {  // min-width: 1200px
-        min-height: min-content;
         -webkit-clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
         clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
     }

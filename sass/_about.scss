@@ -1,6 +1,5 @@
-.about {  // section
-    min-height: min-content;
-    height: 100vh;
+.about {
+    height: 100%;
     width: 100%;
     display: flex;
     align-items: center;
@@ -13,14 +12,6 @@
         -webkit-clip-path: polygon(0 0, 100% 0, 100% 90vh, 0 100%);
         clip-path: polygon(0 0, 100% 0, 100% 90vh, 0 100%);
         padding: 4rem;
-    }
-
-    @include respond(desktop) {  // min-width 1024px
-       height: 60vh;
-    }
-
-    @include respond(tab-land) {  // min-width 1200px
-        min-height: min-content;
     }
 
     &__text {  // div

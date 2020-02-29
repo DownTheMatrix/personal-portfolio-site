@@ -1,6 +1,6 @@
 .contact {  // section
-  min-height: min-content;
-  height: 40vh;
+  width: 100%;
+  height: 100%;
   padding: 6rem;
   text-align: center;
   background-image: linear-gradient(
@@ -8,15 +8,6 @@
     lighten($color-bg, 18%),
     lighten($color-bg, 23%)
   );
-  width: 100%;
-
-  @include respond(phone) {
-    height: 30vh;
-  }
-
-  @include respond(desktop) {  // min-width: 1024px
-    height: 30vh;
-  }
 
   &__title {  // div
     width: 100%;
